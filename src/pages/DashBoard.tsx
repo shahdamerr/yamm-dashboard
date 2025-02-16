@@ -3,33 +3,20 @@ import { Content, Header } from "antd/es/layout/layout";
 import Sider from "antd/es/layout/Sider";
 import Navbar from "../components/NavBar";
 import SideBar from "../components/SideBar";
-import Table from "../components/Table";
+import OrderTable from "../components/OrderTable";
 
 export default function Dashboard() {
   return (
-    <Layout>
-      <Sider
-        style={{
-          backgroundColor: "white",
-        }}
-      >
+    <Layout className="bg-white">
+      <Sider className="shadow-md">
         <SideBar />
       </Sider>
-      <Layout
-        style={{
-          backgroundColor: "white",
-        }}
-      >
-        <Header
-          style={{
-            background: "white",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-          }}
-        >
+      <Layout className="flex flex-col w-full">
+        <Header className="shadow-md">
           <Navbar />
         </Header>
-        <Content>
-          <Table />
+        <Content className="m-4 p-4">
+          <OrderTable />
         </Content>
       </Layout>
     </Layout>

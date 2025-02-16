@@ -19,16 +19,18 @@ const ordersApi = baseApi.injectEndpoints({
         url: "/orders",
         method: "GET",
       }),
+      providesTags: ["Orders"],
+      transformResponse: (response: Order[]) => response,
     }),
-    getOrderById: builder.query<Order, string>({
-      query: (id) => ({
-        url: `/orders/${id}`,
-        method: "GET",
-      }),
-    }),
+    // getOrderById: builder.query<Order, string>({
+    //   query: (id) => ({
+    //     url: `/orders/${id}`,
+    //     method: "GET",
+    //   }),
+    // }),
   }),
   overrideExisting: false,
 });
 
-export const { useGetOrdersQuery, useGetOrderByIdQuery } = ordersApi;
+export const { useGetOrdersQuery } = ordersApi;
 export default ordersApi;

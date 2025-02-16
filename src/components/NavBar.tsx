@@ -3,26 +3,12 @@ import { FileOutlined } from "@ant-design/icons";
 
 export default function NavBar() {
   return (
-    <div
-      style={{
-        backgroundColor: "white",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
-      <span style={{ fontSize: "18px", fontWeight: "bold" }}>
-        <FileOutlined style={{ marginRight: "8px" }} />
+    <div className="bg-white w-full flex justify-between items-center p-4">
+      <span className="text-lg font-bold flex items-center">
+        <FileOutlined className="mr-2" />
         Store Orders
       </span>
-      <Button
-        style={{
-          backgroundColor: "transparent",
-          color: "#9D6CFF",
-          border: "2px solid #9D6CFF",
-          cursor: "pointer",
-        }}
-      >
+      <Button className="bg-transparent text-primary border-2 border-black cursor-pointer">
         Send a feedback!
       </Button>
     </div>
