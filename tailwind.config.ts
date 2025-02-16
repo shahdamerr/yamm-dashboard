@@ -2,7 +2,6 @@ import { Config } from "tailwindcss";
 import theme from "tailwindcss/defaultTheme";
 
 const config = {
-  darkMode: "class",
   important: true,
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -12,19 +11,7 @@ const config = {
     },
     extend: {
       colors: {
-        "hbr-primary": "#0071CE",
-        primary: "#2A7DE1",
-        "primary-hover": "rgba(0, 113, 206, 1)",
-        "primary-transparent": "rgba(42, 125, 225, 0.082)",
-        danger: "#ff4d4f",
-        dark: "#283641",
-        light: "#747474",
-        breadcrumbs: "#283641",
-        "shadow-transparent": "rgba(42, 125, 225, 0.02)",
-        "primary-dark": "#002F87",
-        white: "#ffffff",
-        currentColor: "currentColor",
-        cmsBg: "#F5F5FA",
+        primary: "#9D6CFF",
       },
       boxShadow: {},
       height: {

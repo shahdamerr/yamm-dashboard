@@ -1,14 +1,30 @@
-const Navbar = () => {
+import { Button } from "antd/es/radio";
+import { FileOutlined } from "@ant-design/icons";
+
+export default function NavBar() {
   return (
-    <div className="bg-white px-6 py-4 flex justify-between items-center">
-      <div className="text-lg font-semibold">Store Orders</div>
-      <div>
-        <button className="bg-purple-500 text-white px-4 py-2 rounded-md">
-          Send a feedback
-        </button>
-      </div>
+    <div
+      style={{
+        backgroundColor: "white",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
+    >
+      <span style={{ fontSize: "18px", fontWeight: "bold" }}>
+        <FileOutlined style={{ marginRight: "8px" }} />
+        Store Orders
+      </span>
+      <Button
+        style={{
+          backgroundColor: "transparent",
+          color: "#9D6CFF",
+          border: "2px solid #9D6CFF",
+          cursor: "pointer",
+        }}
+      >
+        Send a feedback!
+      </Button>
     </div>
   );
-};
-
-export default Navbar;
+}

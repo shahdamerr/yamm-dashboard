@@ -1,31 +1,34 @@
-import {
-  HomeIcon,
-  ArchiveBoxIcon,
-  Cog6ToothIcon,
-} from "@heroicons/react/24/outline";
+import { HomeOutlined } from "@ant-design/icons";
 
-const Sidebar = () => {
+export default function SideBar() {
   return (
-    <aside className="w-64 bg-white shadow-md h-full flex flex-col p-4">
-      <h2 className="text-l font-bold text-purple-600 mb-6">yamm</h2>
-      <nav>
-        <ul className="space-y-4">
-          <li className="flex items-center space-x-2 text-gray-600 hover:text-purple-600">
-            <HomeIcon className="w-5 h-5" />
-            <span>Store Orders</span>
-          </li>
-          <li className="flex items-center space-x-2 text-gray-600 hover:text-purple-600">
-            <ArchiveBoxIcon className="w-5 h-5" />
-            <span>Products</span>
-          </li>
-          <li className="flex items-center space-x-2 text-gray-600 hover:text-purple-600">
-            <Cog6ToothIcon className="w-5 h-5" />
-            <span>Settings</span>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+    <div
+      className="h-screen w-64 bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 text-white p-4"
+      // style={{ boxShadow: "2px 0 0px rgba(0, 0, 0, 0.1)" }}
+    >
+      <div
+        style={{
+          fontSize: "28px",
+          fontWeight: "bold",
+          color: "#9D6CFF",
+          textAlign: "center",
+          marginBottom: "40px",
+          marginTop: "14px",
+        }}
+      >
+        yamm
+      </div>
+      <span
+        style={{
+          fontSize: "18px",
+          color: "#9D6CFF",
+          textAlign: "center",
+          margin: "10px",
+        }}
+      >
+        <HomeOutlined style={{ marginRight: "10px" }} />
+        Products
+      </span>
+    </div>
   );
-};
-
-export default Sidebar;
+}

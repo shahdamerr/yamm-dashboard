@@ -1,14 +1,37 @@
+import { Layout } from "antd";
+import { Content, Header } from "antd/es/layout/layout";
+import Sider from "antd/es/layout/Sider";
 import Navbar from "../components/NavBar";
-import Sidebar from "../components/SideBar";
+import SideBar from "../components/SideBar";
+import Table from "../components/Table";
 
-export default function Dashboard({ children }: { children: React.ReactNode }) {
+export default function Dashboard() {
   return (
-    <div className="flex h-screen bg-gray-100">
-      <Sidebar />
-      <div className="flex-1 flex flex-col">
-        <Navbar />
-        <main className="p-6">{children}</main>
-      </div>
-    </div>
+    <Layout>
+      <Sider
+        style={{
+          backgroundColor: "white",
+        }}
+      >
+        <SideBar />
+      </Sider>
+      <Layout
+        style={{
+          backgroundColor: "white",
+        }}
+      >
+        <Header
+          style={{
+            background: "white",
+            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+          }}
+        >
+          <Navbar />
+        </Header>
+        <Content>
+          <Table />
+        </Content>
+      </Layout>
+    </Layout>
   );
 }
