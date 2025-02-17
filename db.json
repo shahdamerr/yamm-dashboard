@@ -1,0 +1,413 @@
+{
+  "orders": [
+    {
+      "id": "123",
+      "reason": "Damaged item",
+      "store_name": "TechStore",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/TechStore_Logo.png",
+      "store_url": "https://techstore.com",
+      "amount": 1025.97,
+      "active": true,
+      "decision": "Accept",
+      "items": [
+        {
+          "name": "Laptop",
+          "id": "A1",
+          "price": 999.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+        },
+        {
+          "name": "Mouse",
+          "id": "A2",
+          "price": 25.99,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1517331156700-3c241d2b4d83"
+        }
+      ]
+    },
+    {
+      "id": "124",
+      "reason": "Wrong size",
+      "store_name": "FashionHub",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/1/1b/FashionHub_Logo.png",
+      "store_url": "https://fashionhub.com",
+      "amount": 79.99,
+      "active": false,
+      "decision": "Accept",
+      "items": [
+        {
+          "name": "T-Shirt",
+          "id": "B1",
+          "price": 19.99,
+          "quantity": 3,
+          "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246"
+        },
+        {
+          "name": "Jeans",
+          "id": "B2",
+          "price": 39.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b"
+        }
+      ]
+    },
+    {
+      "id": "125",
+      "reason": "Item not delivered",
+      "store_name": "GadgetWorld",
+      "store_logo": "D:/Desktop/yamm-dashboard/src/assets/150x150.png",
+      "store_url": "https://gadgetworld.com",
+      "amount": 499,
+      "active": true,
+      "decision": null,
+      "items": [
+        {
+          "name": "Smartphone",
+          "id": "C1",
+          "price": 499,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1575311373939-13c29337e05f"
+        }
+      ]
+    },
+    {
+      "id": "126",
+      "reason": "Defective product",
+      "store_name": "ApplianceMart",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/5/5b/ApplianceMart_Logo.png",
+      "store_url": "https://appliancemart.com",
+      "amount": 249.5,
+      "active": true,
+      "decision": null,
+      "items": [
+        {
+          "name": "Toaster",
+          "id": "D1",
+          "price": 49.5,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1600489005111-027e26b7579d"
+        },
+        {
+          "name": "Microwave",
+          "id": "D2",
+          "price": 200,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1612444530645-3e51bff1e5aa"
+        }
+      ]
+    },
+    {
+      "id": "127",
+      "reason": "Product different from description",
+      "store_name": "HomeDecor",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/HomeDecor_Logo.png",
+      "store_url": "https://homedecor.com",
+      "amount": 99.99,
+      "active": false,
+      "decision": null,
+      "items": [
+        {
+          "name": "Table Lamp",
+          "id": "E1",
+          "price": 49.99,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1567016432779-094069958ea1"
+        }
+      ]
+    },
+    {
+      "id": "128",
+      "reason": "Item arrived late",
+      "store_name": "BookStore",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/e/e7/BookStore_Logo.png",
+      "store_url": "https://bookstore.com",
+      "amount": 45.99,
+      "active": true,
+      "decision": null,
+      "items": [
+        {
+          "name": "Novel - The Great Gatsby",
+          "id": "F1",
+          "price": 15.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1522156373667-4c7234bbd804"
+        },
+        {
+          "name": "Notebook",
+          "id": "F2",
+          "price": 10.99,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1515905422043-a4eb291ff12c"
+        }
+      ]
+    },
+    {
+      "id": "129",
+      "reason": "Product was missing from the package",
+      "store_name": "BeautyShop",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/9/91/BeautyShop_Logo.png",
+      "store_url": "https://beautyshop.com",
+      "amount": 64.99,
+      "active": true,
+      "decision": null,
+      "items": [
+        {
+          "name": "Lipstick",
+          "id": "G1",
+          "price": 19.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1512310604669-443f26e37e35"
+        },
+        {
+          "name": "Foundation",
+          "id": "G2",
+          "price": 29.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1602800216765-d67170f098b8"
+        },
+        {
+          "name": "Eyeliner",
+          "id": "G3",
+          "price": 14.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1611162618660-203b20a5be7c"
+        }
+      ]
+    },
+    {
+      "id": "130",
+      "reason": "Damaged item",
+      "store_name": "TechStore",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/TechStore_Logo.png",
+      "store_url": "https://techstore.com",
+      "amount": 1025.97,
+      "active": true,
+      "decision": "Accept",
+      "items": [
+        {
+          "name": "Laptop",
+          "id": "A1",
+          "price": 999.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+        },
+        {
+          "name": "Mouse",
+          "id": "A2",
+          "price": 25.99,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1517331156700-3c241d2b4d83"
+        }
+      ]
+    },
+    {
+      "id": "131",
+      "reason": "Damaged item",
+      "store_name": "TechStore",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/TechStore_Logo.png",
+      "store_url": "https://techstore.com",
+      "amount": 1025.97,
+      "active": true,
+      "decision": "Accept",
+      "items": [
+        {
+          "name": "Laptop",
+          "id": "A1",
+          "price": 999.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+        },
+        {
+          "name": "Mouse",
+          "id": "A2",
+          "price": 25.99,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1517331156700-3c241d2b4d83"
+        }
+      ]
+    },
+    {
+      "id": "132",
+      "reason": "Damaged item",
+      "store_name": "TechStore",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/TechStore_Logo.png",
+      "store_url": "https://techstore.com",
+      "amount": 1025.97,
+      "active": true,
+      "decision": null,
+      "items": [
+        {
+          "name": "Laptop",
+          "id": "A1",
+          "price": 999.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+        },
+        {
+          "name": "Mouse",
+          "id": "A2",
+          "price": 25.99,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1517331156700-3c241d2b4d83"
+        }
+      ]
+    },
+    {
+      "id": "133",
+      "reason": "Damaged item",
+      "store_name": "TechStore",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/TechStore_Logo.png",
+      "store_url": "https://techstore.com",
+      "amount": 1025.97,
+      "active": true,
+      "decision": "Accept",
+      "items": [
+        {
+          "name": "Laptop",
+          "id": "A1",
+          "price": 999.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+        },
+        {
+          "name": "Mouse",
+          "id": "A2",
+          "price": 25.99,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1517331156700-3c241d2b4d83"
+        }
+      ]
+    },
+    {
+      "id": "134",
+      "reason": "Damaged item",
+      "store_name": "TechStore",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/TechStore_Logo.png",
+      "store_url": "https://techstore.com",
+      "amount": 1025.97,
+      "active": true,
+      "decision": null,
+      "items": [
+        {
+          "name": "Laptop",
+          "id": "A1",
+          "price": 999.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+        },
+        {
+          "name": "Mouse",
+          "id": "A2",
+          "price": 25.99,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1517331156700-3c241d2b4d83"
+        }
+      ]
+    },
+    {
+      "id": "135",
+      "reason": "Damaged item",
+      "store_name": "TechStore",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/TechStore_Logo.png",
+      "store_url": "https://techstore.com",
+      "amount": 1025.97,
+      "active": true,
+      "decision": "Reject",
+      "items": [
+        {
+          "name": "Laptop",
+          "id": "A1",
+          "price": 999.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+        },
+        {
+          "name": "Mouse",
+          "id": "A2",
+          "price": 25.99,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1517331156700-3c241d2b4d83"
+        }
+      ]
+    },
+    {
+      "id": "136",
+      "reason": "Damaged item",
+      "store_name": "TechStore",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/TechStore_Logo.png",
+      "store_url": "https://techstore.com",
+      "amount": 1025.97,
+      "active": true,
+      "decision": null,
+      "items": [
+        {
+          "name": "Laptop",
+          "id": "A1",
+          "price": 999.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+        },
+        {
+          "name": "Mouse",
+          "id": "A2",
+          "price": 25.99,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1517331156700-3c241d2b4d83"
+        }
+      ]
+    },
+    {
+      "id": "137",
+      "reason": "Damaged item",
+      "store_name": "TechStore",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/TechStore_Logo.png",
+      "store_url": "https://techstore.com",
+      "amount": 1025.97,
+      "active": true,
+      "decision": "Reject",
+      "items": [
+        {
+          "name": "Laptop",
+          "id": "A1",
+          "price": 999.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+        },
+        {
+          "name": "Mouse",
+          "id": "A2",
+          "price": 25.99,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1517331156700-3c241d2b4d83"
+        }
+      ]
+    },
+    {
+      "id": "138",
+      "reason": "Damaged item",
+      "store_name": "TechStore",
+      "store_logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/TechStore_Logo.png",
+      "store_url": "https://techstore.com",
+      "amount": 1025.97,
+      "active": true,
+      "decision": "Reject",
+      "items": [
+        {
+          "name": "Laptop",
+          "id": "A1",
+          "price": 999.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+        },
+        {
+          "name": "Mouse",
+          "id": "A2",
+          "price": 25.99,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1517331156700-3c241d2b4d83"
+        }
+      ]
+    }
+  ]
+}
