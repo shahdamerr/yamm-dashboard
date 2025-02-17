@@ -3,9 +3,9 @@ import {
   useUpdateOrderActiveStatusMutation,
   useUpdateOrderDecisionMutation,
 } from "../store/apis/Orders";
-import { Table, Switch, Dropdown, Button, message, Select } from "antd";
+import { Table, Switch, Button, message, Select } from "antd";
 import type { ColumnsType } from "antd/es/table";
-import { MoreOutlined, EyeOutlined } from "@ant-design/icons";
+import { EyeOutlined } from "@ant-design/icons";
 
 import { useNavigate } from "react-router-dom";
 
@@ -150,7 +150,7 @@ export default function OrderTable() {
       columns={columns}
       loading={isLoading}
       pagination={{
-        pageSize: 5,
+        pageSize: 15,
         showSizeChanger: false,
         position: ["bottomCenter"],
         style: {},
