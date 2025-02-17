@@ -45,12 +45,17 @@ const ordersApi = baseApi.injectEndpoints({
       invalidatesTags: ["Orders"],
     }),
 
-    // getOrderById: builder.query<Order, string>({
-    //   query: (id) => ({
-    //     url: `/orders/${id}`,
-    //     method: "GET",
-    //   }),
-    // }),
+    getOrderById: builder.query<
+      { name: string; id: string; price: number; quantity: number }[],
+      string
+    >({
+      query: (id) => ({
+        url: `/orders/${id}`,
+        method: "GET",
+      }),
+      providesTags: ["Orders"],
+      transformResponse: (response: Order) => response.items,
+    }),
   }),
   overrideExisting: false,
 });
@@ -59,5 +64,6 @@ export const {
   useGetOrdersQuery,
   useUpdateOrderActiveStatusMutation,
   useUpdateOrderDecisionMutation,
+  useGetOrderByIdQuery,
 } = ordersApi;
 export default ordersApi;

@@ -30,7 +30,7 @@ interface Order {
 }
 
 export default function Dashboard() {
-  const { data: orders, error, isLoading } = useGetOrdersQuery();
+  const { data: orders, isLoading } = useGetOrdersQuery();
   const [updateActiveStatus] = useUpdateOrderActiveStatusMutation();
   const [updateDecision] = useUpdateOrderDecisionMutation();
   const navigate = useNavigate();
@@ -76,7 +76,7 @@ export default function Dashboard() {
         console.log("Image URL:", logo);
         return (
           <img
-            src="src\assets\150x150.png" //{logo}
+            src="src\assets\150x150.png"
             alt="Store Logo"
             style={{ width: 50, height: 50, objectFit: "contain" }}
           />
@@ -149,15 +149,16 @@ export default function Dashboard() {
     <Layout className="min-h-screen ">
       <Sider
         width={250}
-        className="!bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600  "
+        className="!bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 text-center  "
       >
-        <div className="text-3xl font-bold text-white text-center mt-4 mb-10">
-          Yamm
-        </div>
-        <div className="text-lg  text-white flex  gap-2">
+        <div className="text-3xl font-bold text-white  mt-4 mb-10">Yamm</div>
+        <Button
+          onClick={() => navigate(`/`)}
+          className="text-lg  text-white flex  !bg-grey-200 gap-2"
+        >
           <HomeOutlined />
           Products
-        </div>
+        </Button>
       </Sider>
       <Layout className="min-h-screen ">
         <Header className="shadow-md !bg-white px-4">
