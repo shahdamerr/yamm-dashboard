@@ -45,18 +45,21 @@ const ordersApi = baseApi.injectEndpoints({
       invalidatesTags: ["Orders"],
     }),
 
-    getOrderById: builder.query<
-      { name: string; id: string; price: number; quantity: number }[],
-      string
-    >({
-      query: (id) => ({
-        url: `/orders/${id}`,
-        method: "GET",
-      }),
+    getOrderById: builder.query<Order, string>({
+      query: (id) => {
+        return {
+          url: `/orders/${id}`,
+          method: "GET",
+        };
+      },
+      transformResponse: (response: Order) => {
+        console.log("API Response for Order:", response);
+        return response;
+      },
       providesTags: ["Orders"],
-      transformResponse: (response: Order) => response.items,
     }),
   }),
+
   overrideExisting: false,
 });
 

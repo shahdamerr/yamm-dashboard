@@ -7,6 +7,7 @@ import Sider from "antd/es/layout/Sider";
 import { HomeOutlined } from "@ant-design/icons";
 import { Content, Header } from "antd/es/layout/layout";
 import NavBar from "../components/NavBar";
+import { stringify } from "querystring";
 
 interface Item {
   id: string;
@@ -16,15 +17,14 @@ interface Item {
 }
 
 export default function Orderdetails() {
-  const { orderId } = useParams<{ orderId: string }>();
-  const navigate = useNavigate();
+  const { id } = useParams();
 
-  const { data: order, isLoading } = useGetOrderByIdQuery(orderId!, {
-    selectFromResult: ({ data, ...rest }) => ({
-      data: data ? data : [],
-      ...rest,
-    }),
+  const navigate = useNavigate();
+  console.log({ orderId: id });
+  const { data: order, isLoading } = useGetOrderByIdQuery(id ?? "", {
+    skip: !id,
   });
+
   const columns: ColumnsType<Item> = [
     {
       title: "Item Name",
@@ -50,7 +50,6 @@ export default function Orderdetails() {
   ];
 
   if (isLoading) return <Spin size="large" />;
-  if (!order) return <p>No items found</p>;
 
   return (
     <div>
@@ -81,7 +80,7 @@ export default function Orderdetails() {
               <div className="overflow-x-auto min-h-[calc(100vh-8rem)]">
                 <OrderTable<Item>
                   columns={columns}
-                  data={order}
+                  data={order?.items || []}
                   loading={isLoading}
                 />
               </div>

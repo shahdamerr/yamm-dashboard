@@ -18,7 +18,7 @@ export default function OrderTable<T extends { id: string }>({
   },
 }: TableComponentProps<T>) {
   return (
-    <Table<T>
+    <Table
       dataSource={data?.map((item) => ({
         ...item,
         key: item.id,

@@ -11,7 +11,7 @@ export default function App() {
       element: <DashBoard />,
     },
     {
-      path: "/orders/:id",
+      path: ":id",
       element: <Orderdetails />,
     },
   ]);
