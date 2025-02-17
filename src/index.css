@@ -3,7 +3,3 @@
 @import "antd/dist/reset.css"; */
 
 @import "tailwindcss";
-
-:root {
-  --scalar-background-1: transparent;
-}

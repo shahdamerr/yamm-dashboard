@@ -8,7 +8,7 @@
       "store_url": "https://techstore.com",
       "amount": 1025.97,
       "active": true,
-      "decision": null,
+      "decision": "Accept",
       "items": [
         {
           "name": "Laptop",
@@ -34,7 +34,7 @@
       "store_url": "https://fashionhub.com",
       "amount": 79.99,
       "active": false,
-      "decision": null,
+      "decision": "Accept",
       "items": [
         {
           "name": "T-Shirt",
@@ -58,14 +58,14 @@
       "store_name": "GadgetWorld",
       "store_logo": "D:/Desktop/yamm-dashboard/src/assets/150x150.png",
       "store_url": "https://gadgetworld.com",
-      "amount": 499.0,
+      "amount": 499,
       "active": true,
       "decision": null,
       "items": [
         {
           "name": "Smartphone",
           "id": "C1",
-          "price": 499.0,
+          "price": 499,
           "quantity": 1,
           "image": "https://images.unsplash.com/photo-1575311373939-13c29337e05f"
         }
@@ -91,7 +91,7 @@
         {
           "name": "Microwave",
           "id": "D2",
-          "price": 200.0,
+          "price": 200,
           "quantity": 1,
           "image": "https://images.unsplash.com/photo-1612444530645-3e51bff1e5aa"
         }

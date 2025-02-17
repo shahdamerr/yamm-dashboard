@@ -1,5 +1,9 @@
-import { useGetOrdersQuery } from "../store/apis/Orders";
-import { Table, Switch, Dropdown, Button } from "antd";
+import {
+  useGetOrdersQuery,
+  useUpdateOrderActiveStatusMutation,
+  useUpdateOrderDecisionMutation,
+} from "../store/apis/Orders";
+import { Table, Switch, Dropdown, Button, message, Select } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import { MoreOutlined, EyeOutlined } from "@ant-design/icons";
 
@@ -24,14 +28,26 @@ interface Order {
 
 export default function OrderTable() {
   const { data: orders, error, isLoading } = useGetOrdersQuery();
+  const [updateActiveStatus] = useUpdateOrderActiveStatusMutation();
+  const [updateDecision] = useUpdateOrderDecisionMutation();
   const navigate = useNavigate();
 
-  const handleDecisionChange = (orderId: string, decision: string) => {
-    console.log(`Order ${orderId} decision changed to: ${decision}`);
-    // TODO: Implement API call to update decision
+  const handleToggleActive = async (orderId: string, checked: boolean) => {
+    try {
+      await updateActiveStatus({ id: orderId, active: checked }).unwrap();
+    } catch (error) {
+      console.error("Failed to update active status:", error);
+    }
   };
-
-  const handleToggleActive = (orderId: string, checked: boolean) => {};
+  const handleDecisionChange = async (orderId: string, newDecision: string) => {
+    try {
+      await updateDecision({ id: orderId, newDecision }).unwrap();
+      message.success(`Decision updated successfully`);
+    } catch (error) {
+      console.error("Failed to update decision:", error);
+      message.error("Failed to update decision");
+    }
+  };
 
   const columns: ColumnsType<Order> = [
     {
@@ -99,33 +115,17 @@ export default function OrderTable() {
     },
     {
       title: "Decision",
+      dataIndex: "decision",
       key: "decision",
-      render: (_, record: Order) => (
-        <Dropdown
-          menu={{
-            items: [
-              {
-                key: "reject",
-                label: "Reject",
-                onClick: () => handleDecisionChange(record.id, "Reject"),
-              },
-              {
-                key: "accept",
-                label: "Accept",
-                onClick: () => handleDecisionChange(record.id, "Accept"),
-              },
-              {
-                key: "escalate",
-                label: "Escalate",
-                onClick: () => handleDecisionChange(record.id, "Escalate"),
-              },
-            ],
-          }}
+      render: (decision, record) => (
+        <Select
+          defaultValue={decision}
+          onChange={(value) => handleDecisionChange(record.id, value)}
         >
-          <Button>
-            Not Yet <MoreOutlined />
-          </Button>
-        </Dropdown>
+          <Select.Option value="Accept">Accept</Select.Option>
+          <Select.Option value="Reject">Reject</Select.Option>
+          <Select.Option value={null}>Pending</Select.Option>
+        </Select>
       ),
     },
     {
@@ -153,6 +153,7 @@ export default function OrderTable() {
         pageSize: 5,
         showSizeChanger: false,
         position: ["bottomCenter"],
+        style: {},
       }}
     />
   );
