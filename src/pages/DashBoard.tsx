@@ -1,13 +1,10 @@
-import { Button, Layout, Select, Switch, notification } from "antd";
-import { Content, Header } from "antd/es/layout/layout";
-import Sider from "antd/es/layout/Sider";
-import Navbar from "../components/NavBar";
+import { Button, Select, Spin, Switch, notification } from "antd";
+
 import OrderTable from "../components/OrderTable";
 import {
   CheckCircleOutlined,
   CloseCircleOutlined,
   EyeOutlined,
-  HomeOutlined,
 } from "@ant-design/icons";
 import {
   useGetOrdersQuery,
@@ -16,6 +13,7 @@ import {
 } from "../store/apis/Orders";
 import { useNavigate } from "react-router-dom";
 import { ColumnsType } from "antd/es/table";
+import LayoutWrapper from "../components/Layout";
 
 interface Order {
   id: string;
@@ -188,35 +186,24 @@ export default function Dashboard() {
   return (
     <>
       {contextHolder}
-      <Layout className="min-h-screen">
-        <Sider
-          width={250}
-          className="!bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 text-center"
-        >
-          <div className="text-3xl font-bold text-white mt-4 mb-10">Yamm</div>
-          <Button
-            onClick={() => navigate(`/`)}
-            className="text-lg text-white flex !bg-grey-200 gap-2"
-          >
-            <HomeOutlined />
-            Products
-          </Button>
-        </Sider>
-        <Layout className="min-h-screen">
-          <Header className="shadow-md !bg-white px-4">
-            <Navbar />
-          </Header>
-          <Content className="m-4 p-4 rounded-lg shadow">
-            <div className="overflow-x-auto min-h-[calc(100vh-8rem)]">
-              <OrderTable<Order>
-                columns={columns}
-                data={orders || []}
-                loading={isLoading}
-              />
-            </div>
-          </Content>
-        </Layout>
-      </Layout>
+      <div>
+        {isLoading ? (
+          <div>
+            <Spin
+              size="large"
+              className="!flex justify-center items-center min-h-screen"
+            />
+          </div>
+        ) : (
+          <LayoutWrapper>
+            <OrderTable<Order>
+              columns={columns}
+              data={orders || []}
+              loading={isLoading}
+            />
+          </LayoutWrapper>
+        )}
+      </div>
     </>
   );
 }

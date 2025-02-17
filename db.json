@@ -7,7 +7,7 @@
       "store_logo": "src/assets/150x150.png",
       "store_url": "https://techstore.com",
       "amount": 1025.97,
-      "active": false,
+      "active": true,
       "decision": "Reject",
       "items": [
         {
@@ -33,7 +33,7 @@
       "store_logo": "src/assets/150x150.png",
       "store_url": "https://fashionhub.com",
       "amount": 79.99,
-      "active": true,
+      "active": false,
       "decision": "Escalate",
       "items": [
         {
