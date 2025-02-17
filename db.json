@@ -365,7 +365,7 @@
       "store_url": "https://techstore.com",
       "amount": 1025.97,
       "active": true,
-      "decision": "Reject",
+      "decision": null,
       "items": [
         {
           "name": "Laptop",
